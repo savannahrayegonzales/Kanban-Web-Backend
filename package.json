@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/runlevelzero/Kanban-Web-Backend#readme",
   "dependencies": {
+    "mailgun-js": "^0.22.0",
+    "mongodb": "^3.2.4",
     "restify": "^8.3.2"
   }
 }
