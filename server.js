@@ -1,4 +1,6 @@
 const restify  = require("restify"),
+      mongo    = require("mongodb"),
+      mailgun  = require("./mailgun-module"),
       port     = process.env.PORT || 3000;
 
 var server = restify.createServer({
@@ -33,5 +35,17 @@ server.post('/', (request, result, next) =>{
     result.write("<text>hello");
     result.end(request.body.name + "</text>");
     //result.end();
+    next();
+});
+
+server.post('/send_email', (request, result, next) =>{
+    data         = {};
+    data.from    = `Excited User <sampleEmail@inventive-internship.com>`;
+    data.to      = request.body.target;
+    data.subject = `[MAILGUN] ${request.body.subject}`;
+    data.text    = request.body.text;
+    mailgun.sendMail(data);
+    console.log(data);
+    result.end("Email Sent!");
     next();
 });
