@@ -34,4 +34,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run: chmod +x ./node_modules/.bin/mocha && yarn test
