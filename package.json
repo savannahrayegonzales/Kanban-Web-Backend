@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/runlevelzero/Kanban-Web-Backend#readme",
   "dependencies": {
     "mailgun-js": "^0.22.0",
+    "mocha": "^6.1.4",
     "mongodb": "^3.2.4",
     "restify": "^8.3.2"
   }
