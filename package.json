@@ -16,6 +16,7 @@
     "ejs": "^2.6.1",
     "express": "^4.17.1",
     "http-errors": "^1.7.2",
+    "mime": "^2.4.4",
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
